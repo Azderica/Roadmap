@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 2000px;
+        height: 10000px;
+        background: black;
+      }
+
+      .star-size-1 {
+        width: 80px;
+        height: 80px;
+        background: yellow;
+        border-radius: 50%;
+        position: absolute;
+      }
+    </style>
+    <script>
+      window.onload = function () {
+        var star_1 = document.getElementById('star-1')
+        // positioning
+        for (var i = 1; i < star_1.childNodes.length; i += 2) {
+          //console.log(i)
+          //console.log(star_1.childNodes[i])
+          var nowStar = star_1.childNodes[i]
+          nowStar.style.left = Math.random() * window.innerWidth + 'px'
+          nowStar.style.top = Math.random() * window.innerHeight + 'px'
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="star-1">
+      <div class="star-size-1">Langauge</div>
+      <div class="star-size-1">FE</div>
+      <div class="star-size-1">BE</div>
+      <div class="star-size-1">DevOps</div>
+      <div class="star-size-1">Mobile</div>
+    </div>
+  </body>
+</html>
